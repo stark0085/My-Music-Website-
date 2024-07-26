@@ -1,0 +1,42 @@
+
+.pflogo{
+    width: 130px;
+}
+
+.pflogo:hover{
+    width: 150px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    text-decoration: none;
+    padding: 0 1vw;
+}
+
+li a:hover{
+    font-weight: 600;
+    color: white;
+}
+
+li a{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.home-button{
+    background-color: black;
+    border: none;
+}
+
+.home-button :hover{
+    background-color: #80808047;
+    border-radius: 5px;
+}
+
+#textholder{
+    padding: 5px;
+}

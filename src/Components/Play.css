@@ -1,0 +1,38 @@
+.playbar {
+    bottom: 0;
+    color: black;
+    background-color: #1b1717;
+}
+
+.playbtn {
+    background-color: #1b1717;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.playbtn :hover {
+    background-color: #242323;
+    border-radius: 4px;
+}
+
+#myprogressBar {
+    width: 90vw;
+}
+
+.details {
+    position: absolute;
+    right: 57vw;
+    width: 38vw;
+    font-size: 1.2rem;
+}
+
+#bottomImg {
+    width: 45px;
+}
+
+.innerbox {
+    position: absolute;
+    top: 0.5vw;
+    left: 5vw;
+}

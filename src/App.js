@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import { React, useState, createContext } from "react";
 import './App.css';
+import Music from './Components/Music';
+import Navbar from './Components/Navbar';
+import Play from './Components/Play';
+
+export const PlayContext = createContext();
+
+const PlayContextProvider = ({ children }) => {
+  const [play, setPlay] = useState(false);
+  const [artist, setArtist] = useState(undefined);
+  const [song, setSong] = useState(undefined);
+  const [img, setImg] = useState(undefined);
+
+  return (
+    <PlayContext.Provider value={{ play, setPlay, artist, setArtist, song, setSong, img, setImg }}>
+      {children}
+    </PlayContext.Provider>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PlayContextProvider>
+        <Navbar />
+        <Music />
+        <Play />
+      </PlayContextProvider>
+    </>
   );
 }
 
